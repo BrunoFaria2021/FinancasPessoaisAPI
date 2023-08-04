@@ -1,0 +1,46 @@
+# Arquivos de compilação e saída
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.log
+
+# Arquivos e pastas geradas pelo Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.csproj.user
+*.userprefs
+*.dotSettings
+
+# Pacotes NuGet
+packages/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# Arquivos de configuração locais
+appsettings.Development.json
+appsettings.Staging.json
+appsettings.Production.json
+
+# Banco de Dados (por exemplo, SQLite, LocalDB)
+*.db
+*.db-shm
+*.db-wal
+
+# Arquivos de saída da cobertura de código
+*.opencover.xml
+*.coverlet
+
+# Arquivos do Visual Studio Code
+.vscode/
+
+# Ferramentas de depuração
+*.vspscc
+*.vssscc
