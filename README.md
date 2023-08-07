@@ -2,6 +2,9 @@
 :memo: Descrição
 Este projeto foi desenvolvido como parte de um desafio para criar uma Web API de Finanças Pessoais. O objetivo da API é fornecer recursos para gerenciar despesas e receitas pessoais. O projeto foi elaborado usando a plataforma .NET 7.0 e seguindo o padrão de arquitetura DDD (Domain-Driven Design).
 
+<h1 align="center">:moneybag: Desafios Enfrentados :money_with_wings:</h1>
+Durante o desenvolvimento deste projeto, enfrentamos alguns desafios significativos, sendo o principal deles a ocorrência de erros de dependência cíclica. Esse tipo de erro acontece quando há uma referência circular entre os projetos, o que pode tornar o código difícil de manter e criar conflitos no gerenciamento de pacotes NuGet.
+
 :books: Funcionalidades
 📊 Tabelas do Banco
 
@@ -30,7 +33,9 @@ Este projeto ainda está em desenvolvimento, mas algumas regras de negócio já 
 ✔️ 5- A API deve garantir que não ocorram duplicações de Despesas ou Receitas com o mesmo Id.
 
 ✔️ :wrench: Tecnologias / Metodologias Utilizadas
-CSharp <img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://github.com/BrunoFaria2021/FinancasPessoaisAPI.git">
+
+* CSharp <img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
+
 
 AspNetCore
 
@@ -56,18 +61,12 @@ Para executar o projeto, siga as instruções abaixo:
 Clone o repositório:
 
 bash
-Copy code
+
 git clone https://github.com/SeuPerfilAqui/FinancasPessoaisAPI.git
 Restaure as dependências:
 
-Copy code
-dotnet restore
-Execute a aplicação:
-
-arduino
-Copy code
-dotnet run
-O projeto estará disponível em http://localhost:5000.
+:soon: Conclusão
+Este projeto de API de Finanças Pessoais foi um desafio gratificante de ser desenvolvido. Enfrentamos e superamos questões de dependência cíclica, e a estrutura de pastas adotada proporcionou uma organização clara e uma arquitetura sólida para a aplicação. Ainda há trabalho a ser feito para implementar as regras de negócio específicas, mas estamos confiantes de que esse projeto será uma base sólida para atender às necessidades de gerenciamento financeiro pessoal dos usuários
 
 :soon: Implementação Futura
 O projeto ainda está em desenvolvimento e existem algumas funcionalidades que serão adicionadas no futuro:
@@ -79,7 +78,7 @@ O projeto ainda está em desenvolvimento e existem algumas funcionalidades que s
 ✔️ Tratamento de Erros: Adicionar um tratamento robusto de erros para fornecer respostas claras e informativas em caso de exceções.
 
 :handshake: Colaboradores
-https://github.com/SeuPerfilAqui
+https://github.com/BrunoFaria2021
 
 :dart: Status do Projeto
 <p align="LEFT">
