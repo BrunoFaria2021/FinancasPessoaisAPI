@@ -22,7 +22,7 @@ namespace FinancasPessoaisAPI.Services.Controllers
             var receita = _receitaService.ObterReceitaPorId(id);
             if (receita == null)
             {
-                return NotFound();
+                return NotFound("Receita não encontrada.");
             }
 
             return Ok(receita);
@@ -36,10 +36,15 @@ namespace FinancasPessoaisAPI.Services.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(ReceitaDTO receitaDTO)
+        public IActionResult Create([FromBody] ReceitaDTO receitaDTO)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var id = _receitaService.CriarReceita(receitaDTO);
-            return CreatedAtAction(nameof(Get), new { id = id }, receitaDTO);
+            return CreatedAtAction(nameof(Get), new { id = id }, new { Message = "Receita criada com sucesso!" });
         }
 
         [HttpPut("{id}")]
@@ -48,11 +53,11 @@ namespace FinancasPessoaisAPI.Services.Controllers
             var existingReceita = _receitaService.ObterReceitaPorId(id);
             if (existingReceita == null)
             {
-                return NotFound();
+                return NotFound("Receita não encontrada com o ID fornecido.");
             }
 
             _receitaService.AtualizarReceita(receitaDTO);
-            return NoContent();
+            return Ok("Receita atualizada com sucesso!");
         }
 
         [HttpDelete("{id}")]
@@ -65,7 +70,7 @@ namespace FinancasPessoaisAPI.Services.Controllers
             }
 
             _receitaService.ExcluirReceita(id);
-            return NoContent();
+            return Ok("Receita excluída com sucesso!");
         }
     }
 }

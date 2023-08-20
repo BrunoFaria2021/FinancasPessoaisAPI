@@ -7,14 +7,20 @@
         public decimal Valor { get; private set; }
         public DateTime Data { get; private set; }
 
-        public Receita(string descricao, decimal valor, DateTime data)
+        public void Inicializar(string descricao, decimal valor, DateTime data)
         {
             Descricao = descricao;
             Valor = valor;
             Data = data;
         }
-    }
 
+        public void Atualizar(string novaDescricao, decimal novoValor, DateTime novaData)
+        {
+            Descricao = novaDescricao;
+            Valor = novoValor;
+            Data = novaData;
+        }
+    }
 }
 
 

@@ -8,10 +8,10 @@ namespace FinancasPessoaisAPI.Domain.Entities
 {
     public class Despesa
     {
-        public int Id { get; private set; }
-        public string Descricao { get; private set; }
-        public decimal Valor { get; private set; }
-        public DateTime Data { get; private set; }
+        public int Id { get;  set; }
+        public string Descricao { get;  set; }
+        public decimal Valor { get;  set; }
+        public DateTime Data { get;  set; }
 
         public Despesa(string descricao, decimal valor, DateTime data)
         {
