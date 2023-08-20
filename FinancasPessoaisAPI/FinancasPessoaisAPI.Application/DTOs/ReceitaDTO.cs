@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FinancasPessoaisAPI.Application.DTOs
+﻿namespace FinancasPessoaisAPI.Application.DTOs
 {
     public class ReceitaDTO
     {

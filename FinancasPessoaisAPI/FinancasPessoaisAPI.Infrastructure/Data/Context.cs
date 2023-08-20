@@ -16,6 +16,15 @@ namespace FinancasPessoaisAPI.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
+            {
+                modelBuilder.Entity<Despesa>()
+                    .Property(d => d.Valor)
+                    .HasColumnType("decimal(18, 2)");
+
+                modelBuilder.Entity<Receita>()
+                    .Property(r => r.Valor)
+                    .HasColumnType("decimal(18, 2)");
+            }
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
